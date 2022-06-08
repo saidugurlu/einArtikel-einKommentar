@@ -13,6 +13,9 @@ const MenuBar = () => {
         <NavLink className="item" to="/artikeladd">
           Neuer Artikel
         </NavLink>
+        <h3 class="ui item right floated header">
+          Ein Artikel ~ Ein Kommentar
+        </h3>
       </div>
     </div>
   );

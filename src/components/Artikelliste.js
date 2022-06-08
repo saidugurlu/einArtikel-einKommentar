@@ -9,12 +9,8 @@ const Artikelliste = () => {
   return (
     <>
       {articles.length === 0 ? (
-        <div class="ui placeholder">
-          <div class="square content image">
-            <div class="ui active dimmer">
-              <div class="ui large text loader">Loading</div>
-            </div>
-          </div>
+        <div class="ui active inverted dimmer">
+          <div class="ui midi text loader">Loading</div>
         </div>
       ) : (
         articles.map((article, index) => {
@@ -25,7 +21,7 @@ const Artikelliste = () => {
                   <i className="large quote left middle aligned icon"></i>
                   <div className="content ">
                     <Link to={`/posts/${article.id}`} className="header">
-                      <br/> {article.title}
+                      <br /> {article.title}
                     </Link>
                     <div className="description">
                       {dateFormatter(article.created_at)}

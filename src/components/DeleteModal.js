@@ -27,6 +27,7 @@ const DeleteModal = () => {
         open={open}
         onClose={() => setOpen(false)}
         onOpen={() => setOpen(true)}
+        size= 'tiny'
         trigger={<Button >Löschen</Button>}
       >
         <Modal.Header>Artikel löschen!</Modal.Header>

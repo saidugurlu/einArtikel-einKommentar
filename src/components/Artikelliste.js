@@ -23,9 +23,9 @@ const Artikelliste = () => {
               <div className="ui relaxed divided list">
                 <div className="item">
                   <i className="large quote left middle aligned icon"></i>
-                  <div className="content">
+                  <div className="content ">
                     <Link to={`/posts/${article.id}`} className="header">
-                      {article.title}
+                      <br/> {article.title}
                     </Link>
                     <div className="description">
                       {dateFormatter(article.created_at)}

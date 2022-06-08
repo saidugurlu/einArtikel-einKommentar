@@ -10,7 +10,7 @@ const MenuBar = () => {
 
   return (
     <div>
-      <Menu size='massive' pointing>
+      <Menu size="massive" inverted>
         <Menu.Item
           name="home"
           active={activeItem === "home"}

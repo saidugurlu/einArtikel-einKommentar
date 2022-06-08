@@ -3,7 +3,6 @@ import { useNavigate, useParams } from "react-router-dom";
 import { AppContext } from "../AppContext";
 
 const ArtikelForm = (props) => {
-
   const { api, getArticles } = useContext(AppContext);
   const [article, setArticle] = useState(props.article);
   const [error, setError] = useState("");
@@ -20,17 +19,13 @@ const ArtikelForm = (props) => {
     setError("");
 
     if (props.type === "edit") {
-    
       try {
         await api().put(`/posts/${id}`, article);
         navigate(`/posts/${id}`, { replace: true });
       } catch (error) {
         setError("Artikeltitel und Textinhalt müssen ausgefüllt werden!");
       }
-    } 
-    
-    else {
-
+    } else {
       try {
         console.log("POST");
         await api().post("/posts", article);
@@ -39,10 +34,8 @@ const ArtikelForm = (props) => {
       } catch (error) {
         setError("Artikeltitel und Textinhalt müssen ausgefüllt werden!");
       }
-      
     }
   };
-
 
   return (
     <div className="ui form">
@@ -77,7 +70,12 @@ const ArtikelForm = (props) => {
           Speichern
         </button>
         <div className="or" data-text="<>"></div>
-        <button className="ui button ">Absagen</button>
+        <button
+          className="ui button"
+          onClick={() => navigate(`/posts/${id}`, { replace: true })}
+        >
+          Absagen
+        </button>
       </div>
     </div>
   );

@@ -33,6 +33,7 @@ const ArtikelDetail = () => {
       <h2 className="ui header">{articleDetails.title}</h2>
       <p>{articleDetails.created_at}</p>
 
+      <p>{articleDetails.content}</p>
       <div className="ui buttons">
         <Link to={`/posts/${id}/edit`} className="ui black button">
           Bearbeiten
@@ -40,8 +41,6 @@ const ArtikelDetail = () => {
         <div className="or" data-text="<>"></div>
           <DeleteModal /> 
       </div>
-
-      <p>{articleDetails.content}</p>
       <ArtikelComments
         comments={comments}
         handleCommentSubmit={handleCommentSubmit}

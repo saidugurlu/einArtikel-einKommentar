@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { AppContext } from "../AppContext";
 import { useContext } from "react";
 import moment from 'moment';
+import 'moment/locale/de' 
 
 const Artikelliste = () => {
   const { articles } = useContext(AppContext);
@@ -20,7 +21,7 @@ const Artikelliste = () => {
                 <Link to={`/posts/${article.id}`} className="header">
                   {article.title}
                 </Link>
-                <div className="description">{moment(article.created_at).locale("de").calendar()}</div>
+                <div className="description">{moment(article.created_at).locale('de').calendar()}</div>
               </div>
             </div>
           </div>

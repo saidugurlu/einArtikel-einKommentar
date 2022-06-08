@@ -2,7 +2,6 @@ import { Link } from "react-router-dom";
 import { AppContext } from "../AppContext";
 import { useContext } from "react";
 
-
 const Artikelliste = () => {
   const { articles, dateFormatter } = useContext(AppContext);
 

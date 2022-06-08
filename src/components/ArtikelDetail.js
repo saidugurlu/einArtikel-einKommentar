@@ -6,7 +6,7 @@ import { AppContext } from "../AppContext";
 import DeleteModal from "./DeleteModal";
 
 const ArtikelDetail = () => {
-  const { api } = useContext(AppContext);
+  const { api, dateFormatter } = useContext(AppContext);
   const { id } = useParams();
   const [comments, setComments] = useState([]);
   const [articleDetails, setArticleDetails] = useState({});
@@ -31,7 +31,7 @@ const ArtikelDetail = () => {
   return (
     <>
       <h2 className="ui header">{articleDetails.title}</h2>
-      <p>{articleDetails.created_at}</p>
+      <p>{dateFormatter(articleDetails.created_at)}</p>
 
       <p>{articleDetails.content}</p>
       <div className="ui buttons">

@@ -1,32 +1,16 @@
-import { useState } from "react";
-import { Menu } from "semantic-ui-react";
+import { NavLink } from "react-router-dom";
 
 const MenuBar = () => {
-  const [activeItem, setActiveItem] = useState("home");
-
-  const handleItemClick = (e, { name }) => {
-    setActiveItem({ activeItem: name });
-  };
-
   return (
-    <div>
-      <Menu size="massive" inverted>
-        <Menu.Item
-          name="home"
-          active={activeItem === "home"}
-          onClick={handleItemClick}
-        />
-        <Menu.Item
-          name="messages"
-          active={activeItem === "messages"}
-          onClick={handleItemClick}
-        />
-        <Menu.Item
-          name="friends"
-          active={activeItem === "friends"}
-          onClick={handleItemClick}
-        />
-      </Menu>
+    <div className="ui inverted segment">
+      <div className="ui inverted secondary pointing menu">
+        <NavLink className="item" to="/">
+          Home
+        </NavLink>
+        <NavLink className="item" to="/artikeladd">
+          Neuer Artikel
+        </NavLink>
+      </div>
     </div>
   );
 };

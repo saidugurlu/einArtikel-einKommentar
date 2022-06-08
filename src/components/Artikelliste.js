@@ -12,6 +12,7 @@ const Artikelliste = () => {
       </Link>
       {articles.map((article, index) => {
         return (
+           
           <div key={index} className="ui relaxed divided list">
             <div className="item">
               <i className="large quote left middle aligned icon"></i>

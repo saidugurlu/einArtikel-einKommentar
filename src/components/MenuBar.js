@@ -14,8 +14,7 @@ const MenuBar = () => {
           Neuer Artikel
         </NavLink>
         <h3 class="ui item right floated header">
-        &#10077; Ein Artikel &#9854;
- Ein Kommentar &#10078;
+          &#10077; Ein Artikel &#9854; Ein Kommentar &#10078;
         </h3>
       </div>
     </div>

@@ -13,7 +13,7 @@ const Artikelliste = () => {
           <div class="ui midi text loader">Loading</div>
         </div>
       ) : (
-        articles.sort((a,b)=> (a.title < b.title ? 1 : -1)).map((article, index) => {
+        articles.sort((a,b)=> (a.title > b.title ? -1 : 1)).map((article, index) => {
           return (
             <FadeIn key={index}>
               <div className="ui relaxed divided list">

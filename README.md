@@ -1,9 +1,20 @@
-# Getting Started with Create React App
+# Project  Ein Artikel - Ein Kommentar 
+![reference image](/public/images/readme0.png)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![reference image](/public/images/readme1.png)
 
-## Available Scripts
+![reference image](/public/images/readme2.png)
 
-In the project directory, you can run:
+![reference image](/public/images/readme3.png)
+
+In diesem Project wurde mit REACT und SemanticUI-React entwickelt.
+
+## Verfügbare Scripts
+
+Im Projektverzeichnis können Sie Folgendes ausführen:
+
+### `npm i`
 
 ### `npm start`
+
+### Sie können es hier finden : https://ein-artikel-ein-kommentar.vercel.app/
